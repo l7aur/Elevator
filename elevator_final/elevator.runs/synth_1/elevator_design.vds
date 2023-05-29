@@ -1,0 +1,355 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun May 21 16:47:55 2023
+# Process ID: 9980
+# Current directory: C:/Users/L7aur/elevator_final/elevator.runs/synth_1
+# Command line: vivado.exe -log elevator_design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source elevator_design.tcl
+# Log file: C:/Users/L7aur/elevator_final/elevator.runs/synth_1/elevator_design.vds
+# Journal file: C:/Users/L7aur/elevator_final/elevator.runs/synth_1\vivado.jou
+# Running On: DESKTOP-IQA7PSH, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 16371 MB
+#-----------------------------------------------------------
+source elevator_design.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.551 ; gain = 69.965
+Command: read_checkpoint -auto_incremental -incremental C:/Users/L7aur/elevator_final/elevator.srcs/utils_1/imports/synth_1/frequencyDividerTo1Hz.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/L7aur/elevator_final/elevator.srcs/utils_1/imports/synth_1/frequencyDividerTo1Hz.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top elevator_design -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15056
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1206.301 ; gain = 409.609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'elevator_design' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:24]
+INFO: [Synth 8-3491] module 'pmod_keypad' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:4' bound to instance 'c1' of component 'pmod_keypad' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'pmod_keypad' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:17]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:15]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'debounce' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:15]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+	Parameter clk_freq bound to: 50000000 - type: integer 
+	Parameter stable_time bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'debounce' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/debouncer.vhd:4' bound to instance 'debounce_keys' of component 'debounce' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'pmod_keypad' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/pmod_kypd.vhd:17]
+INFO: [Synth 8-3491] module 'floor_to_output_and_speed' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output_and_speed.vhd:5' bound to instance 'c2' of component 'floor_to_output_and_speed' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'floor_to_output_and_speed' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output_and_speed.vhd:20]
+INFO: [Synth 8-3491] module 'speed_selector' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/speed_selector.vhd:5' bound to instance 'c1' of component 'speed_selector' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output_and_speed.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'speed_selector' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/speed_selector.vhd:15]
+INFO: [Synth 8-3491] module 'frequencyDividerTo1Hz' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/frequencyDividerTo1Hz.vhd:5' bound to instance 'c1' of component 'frequencyDividerTo1Hz' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/speed_selector.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'frequencyDividerTo1Hz' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/frequencyDividerTo1Hz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'frequencyDividerTo1Hz' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/frequencyDividerTo1Hz.vhd:11]
+INFO: [Synth 8-3491] module 'sec3_clock' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/aaaa.vhd:5' bound to instance 'c2' of component 'sec3_clock' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/speed_selector.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'sec3_clock' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/aaaa.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'sec3_clock' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/aaaa.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'speed_selector' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/speed_selector.vhd:15]
+INFO: [Synth 8-3491] module 'floor_to_output' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output.vhd:5' bound to instance 'c2' of component 'floor_to_output' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output_and_speed.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'floor_to_output' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output.vhd:20]
+INFO: [Synth 8-3491] module 'floor_state_rememberer' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_state_remember.vhd:5' bound to instance 'c0' of component 'floor_state_rememberer' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'floor_state_rememberer' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_state_remember.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'floor_state_rememberer' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_state_remember.vhd:16]
+INFO: [Synth 8-3491] module 'SSD_module' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/SSD_module.vhd:5' bound to instance 'c1' of component 'SSD_module' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'SSD_module' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/SSD_module.vhd:17]
+WARNING: [Synth 8-614] signal 'floorID' is read in the process but is not in the sensitivity list [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/SSD_module.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'SSD_module' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/SSD_module.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'floor_to_output' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'floor_to_output_and_speed' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/floor_to_output_and_speed.vhd:20]
+INFO: [Synth 8-3491] module 'RAM_module' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/xs.vhd:5' bound to instance 'c3' of component 'RAM_module' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'RAM_module' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/xs.vhd:25]
+INFO: [Synth 8-256] done synthesizing module 'RAM_module' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/xs.vhd:25]
+INFO: [Synth 8-3491] module 'T_flip_flop' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/T_flip_flop.vhd:5' bound to instance 'c4' of component 'T_flip_flop' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'T_flip_flop' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/T_flip_flop.vhd:12]
+WARNING: [Synth 8-614] signal 'aux' is read in the process but is not in the sensitivity list [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/T_flip_flop.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'T_flip_flop' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/T_flip_flop.vhd:12]
+INFO: [Synth 8-3491] module 'sec10' declared at 'C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/10sec.vhd:5' bound to instance 'c5' of component 'sec10' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'sec10' [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/10sec.vhd:14]
+WARNING: [Synth 8-614] signal 'reset1' is read in the process but is not in the sensitivity list [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/10sec.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'sec10' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/10sec.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'elevator_design' (0#1) [C:/Users/L7aur/elevator_final/elevator.srcs/sources_1/new/elevator_design.vhd:24]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1315.996 ; gain = 519.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1315.996 ; gain = 519.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1315.996 ; gain = 519.305
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1315.996 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/L7aur/elevator_final/elevator.srcs/constrs_1/new/basys.xdc]
+Finished Parsing XDC File [C:/Users/L7aur/elevator_final/elevator.srcs/constrs_1/new/basys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/L7aur/elevator_final/elevator.srcs/constrs_1/new/basys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/elevator_design_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/elevator_design_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1428.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1428.852 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'columns_reg' in module 'pmod_keypad'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                           000001 |                             1111
+                 iSTATE1 |                           000010 |                             0111
+                 iSTATE2 |                           000100 |                             1011
+                 iSTATE3 |                           001000 |                             1101
+                 iSTATE4 |                           010000 |                             1110
+                  iSTATE |                           100000 |                             0011
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'columns_reg' using encoding 'one-hot' in module 'pmod_keypad'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	  16 Input    5 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 16    
++---Registers : 
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 16    
+	                1 Bit    Registers := 62    
++---Muxes : 
+	   6 Input   16 Bit        Muxes := 2     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 3     
+	   6 Input    6 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	  14 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+	  14 Input    1 Bit        Muxes := 65    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design elevator_design has port decimal_point driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   116|
+|3     |LUT1   |    24|
+|4     |LUT2   |    60|
+|5     |LUT3   |    73|
+|6     |LUT4   |    77|
+|7     |LUT5   |    22|
+|8     |LUT6   |   205|
+|9     |MUXF7  |     1|
+|10    |FDCE   |   161|
+|11    |FDPE   |     1|
+|12    |FDRE   |   428|
+|13    |IBUF   |    11|
+|14    |OBUF   |    17|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 1428.852 ; gain = 519.305
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1428.852 ; gain = 632.160
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1428.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 117 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1428.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d5fbb880
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1428.852 ; gain = 1009.414
+INFO: [Common 17-1381] The checkpoint 'C:/Users/L7aur/elevator_final/elevator.runs/synth_1/elevator_design.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file elevator_design_utilization_synth.rpt -pb elevator_design_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May 21 16:48:58 2023...
