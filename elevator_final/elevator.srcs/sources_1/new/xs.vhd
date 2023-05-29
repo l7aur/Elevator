@@ -343,7 +343,7 @@ begin
                 if we = '1' then
                         case address1 is
                            when "0000" => memory_matrix(1, 0) <= up_button;
-                                          memory_matrix(2, 0) <= down_button;
+                                          memory_matrix(2, 0) <= '0';
                                           memory_matrix(3, 0) <= (not up_button) and (not down_button);
 				           when "0001" => memory_matrix(1, 1) <= up_button;
                                           memory_matrix(2, 1) <= down_button;
@@ -378,7 +378,7 @@ begin
 			 		       when "1011" => memory_matrix(1, 11) <= up_button;
                                           memory_matrix(2, 11) <= down_button;
                                           memory_matrix(3, 11) <= (not up_button) and (not down_button);
-				    	   when "1100" => memory_matrix(1, 12) <= up_button;
+				    	   when "1100" => memory_matrix(1, 12) <= '0';
                                           memory_matrix(2, 12) <= down_button;
                                           memory_matrix(3, 12) <= (not up_button) and (not down_button);
 					       when others =>  null;
