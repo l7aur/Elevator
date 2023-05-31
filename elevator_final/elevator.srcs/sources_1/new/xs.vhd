@@ -328,10 +328,10 @@ begin
     
     c1_1:  interm1 <= memory_matrix(1, 0) or memory_matrix(1, 1) or memory_matrix(1, 2) or memory_matrix(1, 3) or memory_matrix(1, 4) or 
                       memory_matrix(1, 5) or memory_matrix(1, 6) or memory_matrix(1, 7) or memory_matrix(1, 8) or memory_matrix(1, 9) or 
-                      memory_matrix(1, 10) or memory_matrix(1, 11) or memory_matrix(1, 12);
-    c1_2:  interm2 <= memory_matrix(2, 0) or memory_matrix(2, 1) or memory_matrix(2, 2) or memory_matrix(2, 3) or memory_matrix(2, 4) or 
+                      memory_matrix(1, 10) or memory_matrix(1, 11);-- or memory_matrix(1, 12);
+    c1_2:  interm2 <= memory_matrix(2, 1) or memory_matrix(2, 2) or memory_matrix(2, 3) or memory_matrix(2, 4) or 
                       memory_matrix(2, 5) or memory_matrix(2, 6) or memory_matrix(2, 7) or memory_matrix(2, 8) or memory_matrix(2, 9) or 
-                      memory_matrix(2, 10) or memory_matrix(2, 11) or memory_matrix(2, 12);
+                      memory_matrix(2, 10) or memory_matrix(2, 11) or memory_matrix(2, 12);-- or memory_matrix(2, 0);
     c1_3:  interm3 <= memory_matrix(3, 0) or memory_matrix(3, 1) or memory_matrix(3, 2) or memory_matrix(3, 3) or memory_matrix(3, 4) or 
                       memory_matrix(3, 5) or memory_matrix(3, 6) or memory_matrix(3, 7) or memory_matrix(3, 8) or memory_matrix(3, 9) or 
                       memory_matrix(3, 10) or memory_matrix(3, 11) or memory_matrix(3, 12);
@@ -343,8 +343,8 @@ begin
                 if we = '1' then
                         case address1 is
                            when "0000" => memory_matrix(1, 0) <= up_button;
-                                          memory_matrix(2, 0) <= '0';
-                                          memory_matrix(3, 0) <= (not up_button) and (not down_button);
+                                          memory_matrix(2, 0) <= down_button;
+                                          memory_matrix(3, 0) <= ((not up_button) and (not down_button)) or up_button;
 				           when "0001" => memory_matrix(1, 1) <= up_button;
                                           memory_matrix(2, 1) <= down_button;
                                           memory_matrix(3, 1) <= (not up_button) and (not down_button);
@@ -378,9 +378,9 @@ begin
 			 		       when "1011" => memory_matrix(1, 11) <= up_button;
                                           memory_matrix(2, 11) <= down_button;
                                           memory_matrix(3, 11) <= (not up_button) and (not down_button);
-				    	   when "1100" => memory_matrix(1, 12) <= '0';
+				    	   when "1100" => memory_matrix(1, 12) <= up_button;
                                           memory_matrix(2, 12) <= down_button;
-                                          memory_matrix(3, 12) <= (not up_button) and (not down_button);
+                                          memory_matrix(3, 12) <= ((not up_button) and (not down_button)) or down_button;
 					       when others =>  null;
                         end case;
                         case address2 is 
